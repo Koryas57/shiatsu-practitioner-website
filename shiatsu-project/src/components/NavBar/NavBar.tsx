@@ -1,48 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
 
-
-// Interface pour typer les classes dynamiques dans NavLink
-interface NavLinkClassProps {
-    isActive: boolean;
-}
-
 export const NavBar: React.FC = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
 
     return (
-        <nav className="navbar">
-            <ul>
+        <nav>
+            <button className="menu-toggle" onClick={toggleMenu}>
+                ☰
+            </button>
+
+            {/* Overlay pour fermer le menu en cliquant en dehors */}
+            {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
+
+            {/* Menu déroulant */}
+            <ul className={`menu-links ${isMenuOpen ? 'menu-open' : ''}`}>
                 <li>
-                    <NavLink
-                        to="/"
-                        className={({ isActive }: NavLinkClassProps) => isActive ? "active-link" : ""}
-                    >
-                        Home
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to="/about"
-                        className={({ isActive }: NavLinkClassProps) => isActive ? "active-link" : ""}
-                    >
-                        About
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to="/services"
-                        className={({ isActive }: NavLinkClassProps) => isActive ? "active-link" : ""}
-                    >
+                    <NavLink to="/services" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
                         Services
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink
-                        to="/contact"
-                        className={({ isActive }: NavLinkClassProps) => isActive ? "active-link" : ""}
-                    >
+                    <NavLink to="/testimonials" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
+                        Témoignages
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
                         Contact
                     </NavLink>
                 </li>

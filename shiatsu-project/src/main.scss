@@ -1,0 +1,50 @@
+// Variables SCSS
+$primary-color: #2c3e50;
+$secondary-color: #7f8c8d;
+$background-color: #f9f9f9;
+$font-color: #333;
+
+// Exposer les variables SCSS comme des variables CSS
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --background-color: #{$background-color};
+  --font-color: #{$font-color};
+}
+
+// Mixin pour les couleurs dynamiques
+@mixin dynamic-color($color, $darken-amount: 0%) {
+  background-color: $color;
+  &:hover {
+    background-color: darken($color, $darken-amount);
+  }
+}
+
+// Reset de base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial, sans-serif";
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+// Typographie responsive pour les grands écrans
+@media (min-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+// Classes utilitaires
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
