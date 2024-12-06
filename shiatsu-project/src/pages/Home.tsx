@@ -5,6 +5,7 @@ import { Header } from '../components/Header/Header';
 export const Home: React.FC = () => {
     return (
 
+
         <div className="home">
             <Header />
             <main className="main-content">
