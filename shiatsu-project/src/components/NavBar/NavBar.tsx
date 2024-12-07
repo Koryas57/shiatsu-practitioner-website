@@ -16,7 +16,7 @@ export const NavBar: React.FC = () => {
     return (
         <nav>
             <button className="menu-toggle" onClick={toggleMenu}>
-                ☰
+                <i className="fas fa-bars menu-icon"></i>
             </button>
 
             {/* Overlay pour fermer le menu en cliquant en dehors */}

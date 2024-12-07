@@ -3,12 +3,12 @@ nav {
   z-index: 100;
 
   .menu-toggle {
-    background: var(--background-color);
     border: none;
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    background-color: transparent;
+    font-size: 2rem;
+    color: var(--background-color);
     cursor: pointer;
-    padding: var(--spacing-small);
+    padding: 0.1rem;
     margin: 1rem 1.5rem;
   }
 
@@ -33,17 +33,19 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     display: none;
     flex-direction: column;
-    padding: var(--spacing-small);
     list-style: none;
     z-index: 100;
-    animation: slide-down 0.3s ease;
+    animation: side-slide 0.5s ease;
 
     &.menu-open {
       display: flex;
     }
 
     li {
-      margin: var(--spacing-small) 0;
+      padding: 0 1rem;
+      &:hover {
+        background-color: var(--secondary-color);
+      }
 
       a {
         text-decoration: none;
@@ -55,21 +57,17 @@ nav {
           font-weight: bold;
           color: var(--secondary-color);
         }
-
-        &:hover {
-          background-color: var(--secondary-color);
-        }
       }
     }
   }
 
-  @keyframes slide-down {
+  @keyframes side-slide {
     from {
-      transform: translateY(-20%);
+      transform: translateX(105%);
       opacity: 0;
     }
     to {
-      transform: translateY(0);
+      transform: translateX(0);
       opacity: 1;
     }
   }
