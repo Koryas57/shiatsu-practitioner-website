@@ -31,10 +31,17 @@ $font-color: #333;
 body {
   margin: 0;
   max-width: 1440px;
-  font-family: "Arial, sans-serif";
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   background-color: var(--background-color);
   color: var(--font-color);
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Lora", serif;
 }
 
 // Typographie responsive pour les grands écrans
@@ -59,11 +66,15 @@ body {
   img {
     height: 25vh;
   }
+  @media (max-width: 768px) {
+    margin: 8vh auto 0;
+  }
 }
 
 .intro-text {
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #7f8c8d55;
+  text-align: center;
   & h2 {
     padding-bottom: 0.5rem;
   }

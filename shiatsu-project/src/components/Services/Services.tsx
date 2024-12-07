@@ -5,6 +5,7 @@ import ZenBowl from '../../assets/ZenBowl.jpg'
 import Skeleton from '../../assets/SkeletonMedicine.jpg'
 import BackHealing from '../../assets/BackHealing.jpg'
 
+
 interface Service {
     title: string;
     image: string;
@@ -29,6 +30,7 @@ export const Services: React.FC = () => {
                         <h3>{service.title}</h3>
                         <img src={service.image} alt={service.title} />
                         <p>{service.description}</p>
+                        <button>En savoir plus</button>
                     </div>
                 ))}
             </div>

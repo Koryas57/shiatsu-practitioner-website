@@ -20,7 +20,8 @@ export const Testimonials: React.FC = () => {
             {testimonialsData.map((testimonial, index) => (
                 <blockquote key={index}>
                     <p>"{testimonial.quote}"</p>
-                    <footer>- {testimonial.author}</footer>
+                    <p>- {testimonial.author}</p>
+                    <br />
                 </blockquote>
             ))}
         </section>

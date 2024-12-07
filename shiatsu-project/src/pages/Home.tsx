@@ -5,6 +5,7 @@ import { Testimonials } from '../components/Testimonials/Testimonials';
 import { CTA } from '../components/CTA/CTA';
 import './Home.scss';
 import HandHealing from "../assets/HandHealing.jpg"
+import { Footer } from '../components/Footer/Footer';
 
 export const Home: React.FC = () => {
     const handleCTAClick = () => {
@@ -31,6 +32,7 @@ export const Home: React.FC = () => {
                     buttonText="Réserver une séance"
                     onButtonClick={handleCTAClick}
                 />
+                <Footer />
             </main>
         </div>
     );
