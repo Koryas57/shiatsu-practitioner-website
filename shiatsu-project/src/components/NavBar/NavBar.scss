@@ -3,12 +3,13 @@ nav {
   z-index: 100;
 
   .menu-toggle {
-    background: white;
+    background: var(--background-color);
     border: none;
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
     padding: var(--spacing-small);
+    margin: 1rem 1.5rem;
   }
 
   .menu-overlay {
@@ -47,8 +48,8 @@ nav {
       a {
         text-decoration: none;
         color: #fff;
-        padding: var(--spacing-small) var(--spacing-medium);
         display: block;
+        padding: 1rem;
 
         &.link-active {
           font-weight: bold;

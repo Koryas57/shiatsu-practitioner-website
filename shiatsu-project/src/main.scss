@@ -2,6 +2,7 @@
 $primary-color: #2c3e50;
 $secondary-color: #7f8c8d;
 $background-color: #f9f9f9;
+$darken-color: #07291c;
 $font-color: #333;
 
 // Exposer les variables SCSS comme des variables CSS
@@ -13,10 +14,10 @@ $font-color: #333;
 }
 
 // Mixin pour les couleurs dynamiques
-@mixin dynamic-color($color, $darken-amount: 0%) {
+@mixin dynamic-color($color, $darken-color) {
   background-color: $color;
   &:hover {
-    background-color: darken($color, $darken-amount);
+    background-color: ($color, $darken-color);
   }
 }
 
@@ -29,6 +30,7 @@ $font-color: #333;
 
 body {
   margin: 0;
+  max-width: 1440px;
   font-family: "Arial, sans-serif";
   font-size: 1rem;
   background-color: var(--background-color);
@@ -39,6 +41,7 @@ body {
 @media (min-width: 768px) {
   body {
     font-size: 1.2rem;
+    margin: 0 auto;
   }
 }
 
@@ -47,4 +50,21 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-medium);
+}
+
+.main-content .intro {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  img {
+    height: 25vh;
+  }
+}
+
+.intro-text {
+  padding: 1rem;
+  background-color: #7f8c8d55;
+  & h2 {
+    padding-bottom: 0.5rem;
+  }
 }
