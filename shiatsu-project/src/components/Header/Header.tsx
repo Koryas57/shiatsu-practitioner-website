@@ -1,11 +1,17 @@
 import React from 'react';
 import { NavBar } from '../NavBar/NavBar';
 import './Header.scss';
+import Logo from "../../assets/logoPractitioner.jpeg"
 
 export const Header: React.FC = () => {
     return (
         <header className="header">
-            <div className="logo">Shiatsu Bien-être</div>
+            <img src={Logo} alt="" />
+            <div className="logo">
+                <h1>Yasmina Cobelli</h1>
+                <p>Praticienne Shiatsu</p>
+                <p>Praticienne Laochi</p>
+            </div>
             <NavBar />
         </header>
     );
