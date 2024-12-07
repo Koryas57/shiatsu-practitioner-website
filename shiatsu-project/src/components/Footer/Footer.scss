@@ -23,15 +23,22 @@ footer {
 
       p {
         margin: 0.5rem 0;
+        & i {
+          margin-right: 1rem;
+        }
 
         a {
-          color: var(--secondary-color);
+          color: var(--primary-color);
           text-decoration: none;
 
           &:hover {
             text-decoration: underline;
           }
         }
+      }
+
+      .yutz {
+        padding-left: 1.7rem;
       }
 
       .social-links {

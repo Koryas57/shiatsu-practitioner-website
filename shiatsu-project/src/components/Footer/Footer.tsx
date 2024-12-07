@@ -7,13 +7,23 @@ export const Footer: React.FC = () => {
             <div className="footer-content">
                 <div className="footer-section">
                     <h3>Contact</h3>
-                    <p>Téléphone : <a href="tel:+123456789">+33 6 12 34 56 78</a></p>
-                    <p>Email : <a href="mailto:contact@shiatsu-bienetre.com">contact@shiatsu-bienetre.com</a></p>
+                    <p>
+                        <i className="fas fa-phone-alt"></i>
+                        Téléphone :
+                        <a href="tel:+123456789">+33 6 63 43 02 41</a>
+                    </p>
+                    <p>
+                        <i className="fas fa-envelope"></i>
+                        Email :
+                        <a href="mailto:contact@shiatsu-bienetre.com">shiatsu.yasmina@gmail.com</a>
+                    </p>
                 </div>
                 <div className="footer-section">
                     <h3>Adresse</h3>
-                    <p>123 Rue de la Sérénité</p>
-                    <p>75000 Paris, France</p>
+                    <p>
+                        <i className="fas fa-map-marker-alt"></i>
+                        5 rue du Temple</p>
+                    <p className='yutz'>57970 Yutz, France</p>
                 </div>
                 <div className="footer-section">
                     <h3>Suivez-nous</h3>
@@ -28,7 +38,7 @@ export const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Shiatsu Bien-être. Tous droits réservés.</p>
+                <p>&copy; {new Date().getFullYear()} Yasmina Cobelli. Tous droits réservés.</p>
             </div>
         </footer>
     );
