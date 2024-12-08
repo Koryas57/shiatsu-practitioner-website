@@ -10,12 +10,12 @@ export const Footer: React.FC = () => {
                     <p>
                         <i className="fas fa-phone-alt"></i>
                         Téléphone :
-                        <a href="tel:+123456789">+33 6 63 43 02 41</a>
+                        <a href="tel:+123456789"> +33 6 63 43 02 41</a>
                     </p>
                     <p>
                         <i className="fas fa-envelope"></i>
                         Email :
-                        <a href="mailto:contact@shiatsu-bienetre.com">shiatsu.yasmina@gmail.com</a>
+                        <a href="mailto:contact@shiatsu-bienetre.com"> shiatsu.yasmina@gmail.com</a>
                     </p>
                 </div>
                 <div className="footer-section">

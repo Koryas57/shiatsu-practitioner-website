@@ -14,13 +14,23 @@
     margin: 1rem;
     height: 6vh;
     border-radius: 50%;
+    box-shadow: -1px 2px 3px black;
+    animation: logo-rotation 5s ease;
   }
 
   .logo {
     display: flex;
     flex-direction: column;
+    align-items: center;
     & h1 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+      text-shadow: -1px 2px 3px black;
+    }
+    & p {
+      margin: 0.05rem 0.2rem;
+      font-size: 0.68rem;
+      font-weight: 400;
+      text-shadow: -1px 2px 3px black;
     }
     @media (min-width: 440px) {
       flex-direction: row;
@@ -32,9 +42,13 @@
     }
   }
 
-  .logo p {
-    margin: 0.05rem 0.2rem;
-    font-size: 0.8rem;
-    font-weight: 400;
+  @keyframes logo-rotation {
+    from {
+      transform: rotateY(1turn);
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }

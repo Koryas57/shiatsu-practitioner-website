@@ -9,8 +9,7 @@ export const Header: React.FC = () => {
             <img src={Logo} alt="" />
             <div className="logo">
                 <h1>Yasmina Cobelli</h1>
-                <p>Praticienne Shiatsu</p>
-                <p>Praticienne Laochi</p>
+                <p>Praticienne Shiatsu & Laochi</p>
             </div>
             <NavBar />
         </header>

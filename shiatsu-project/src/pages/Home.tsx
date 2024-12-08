@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from '../components/Header/Header';
 import { Services } from '../components/Services/Services';
 import { Testimonials } from '../components/Testimonials/Testimonials';
 import { CTA } from '../components/CTA/CTA';
-import './Home.scss';
-import HandHealing from "../assets/HandHealing.jpg"
 import { Footer } from '../components/Footer/Footer';
+import { ContactModal } from '../components/ContactModal/ContactModal';
+import { ConfirmationModal } from '../components/ConfirmationModal/ConfirmationModal';
+import './Home.scss';
+import HandHealing from '../assets/HandHealing.jpg';
 
 export const Home: React.FC = () => {
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+    const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
+
     const handleCTAClick = () => {
-        alert('Redirection vers la page de réservation');
+        setIsContactModalOpen(true);
+    };
+
+    const handleCloseContactModal = () => {
+        setIsContactModalOpen(false);
+    };
+
+    const handleConfirmContact = () => {
+        setIsContactModalOpen(false);
+        setIsConfirmationModalOpen(true);
+    };
+
+    const handleCloseConfirmationModal = () => {
+        setIsConfirmationModalOpen(false);
     };
 
     return (
@@ -34,7 +52,17 @@ export const Home: React.FC = () => {
                 />
                 <Footer />
             </main>
+            {/* Modale de contact */}
+            {isContactModalOpen && (
+                <ContactModal
+                    onClose={handleCloseContactModal}
+                    onConfirm={handleConfirmContact}
+                />
+            )}
+            {/* Modale de confirmation */}
+            {isConfirmationModalOpen && (
+                <ConfirmationModal onClose={handleCloseConfirmationModal} />
+            )}
         </div>
     );
 };
-
