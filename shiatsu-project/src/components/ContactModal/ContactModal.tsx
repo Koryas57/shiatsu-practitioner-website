@@ -24,14 +24,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }
 
         try {
             await emailjs.send(
-                'YOUR_SERVICE_ID', // Remplace par ton Service ID
-                'YOUR_TEMPLATE_ID', // Remplace par ton Template ID
+                'service_dnk3had', // Remplace par ton Service ID
+                'template_j9a8b9j', // Remplace par ton Template ID
                 {
                     from_name: formData.name,
                     from_email: formData.email,
                     message: formData.message,
                 },
-                'YOUR_USER_ID' // Remplace par ton User ID
+                'bf7bZryHTyTMYChYv' // Remplace par ton User ID
             );
             setIsLoading(false);
             onConfirm();
