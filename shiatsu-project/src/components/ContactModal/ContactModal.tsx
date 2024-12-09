@@ -8,11 +8,17 @@ interface ContactModalProps {
 }
 
 export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }) => {
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '', // Ajout du champ email
+        phone: '',
+        reason: '',
+        message: ''
+    });
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
@@ -28,7 +34,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }
                 'template_j9a8b9j', // Remplace par ton Template ID
                 {
                     from_name: formData.name,
-                    from_email: formData.email,
+                    email: formData.email, // Inclure l'email saisi
+                    phone: formData.phone,
+                    reason: formData.reason,
                     message: formData.message,
                 },
                 'bf7bZryHTyTMYChYv' // Remplace par ton User ID
@@ -51,26 +59,52 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }
                 <h2>Contactez-nous</h2>
                 <form onSubmit={handleSubmit}>
                     <label>
-                        Nom
+                        Nom et prénom
                         <input
                             type="text"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            placeholder="Votre nom"
+                            placeholder="Votre nom et prénom"
                             required
                         />
                     </label>
                     <label>
-                        Email
+                        Adresse email
                         <input
                             type="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            placeholder="Votre email"
+                            placeholder="Votre adresse email"
                             required
                         />
+                    </label>
+                    <label>
+                        Numéro de téléphone
+                        <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="Votre numéro de téléphone"
+                            required
+                        />
+                    </label>
+                    <label>
+                        Motif de consultation
+                        <select
+                            name="reason"
+                            value={formData.reason}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Sélectionnez un motif</option>
+                            <option value="Relaxation">Relaxation</option>
+                            <option value="Gestion du stress">Gestion du stress</option>
+                            <option value="Douleurs corporelles">Douleurs corporelles</option>
+                            <option value="Autre">Autre</option>
+                        </select>
                     </label>
                     <label>
                         Message
