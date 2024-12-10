@@ -9,6 +9,7 @@ import { ConfirmationModal } from '../components/ConfirmationModal/ConfirmationM
 import './Home.scss';
 import HandHealing from '../assets/HandHealing.jpg';
 import { Map } from '../components/Map/Map';
+import { PublicDetails } from '../components/PublicDetails/PublicDetails';
 
 
 
@@ -49,6 +50,7 @@ export const Home: React.FC = () => {
                 </section>
                 <Services />
                 <Testimonials />
+                <PublicDetails />
                 <CTA
                     title="Prêt(e) à commencer votre voyage ?"
                     buttonText="Réserver une séance"
