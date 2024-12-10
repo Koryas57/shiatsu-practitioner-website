@@ -8,6 +8,10 @@ import { ContactModal } from '../components/ContactModal/ContactModal';
 import { ConfirmationModal } from '../components/ConfirmationModal/ConfirmationModal';
 import './Home.scss';
 import HandHealing from '../assets/HandHealing.jpg';
+import { Map } from '../components/Map/Map';
+
+
+
 
 export const Home: React.FC = () => {
     const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -50,6 +54,7 @@ export const Home: React.FC = () => {
                     buttonText="Réserver une séance"
                     onButtonClick={handleCTAClick}
                 />
+                <Map />
                 <Footer />
             </main>
             {/* Modale de contact */}
