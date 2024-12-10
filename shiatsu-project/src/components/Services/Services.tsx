@@ -23,7 +23,7 @@ export const Services: React.FC = () => {
 
     return (
         <section className="services">
-            <h2>Nos Services</h2>
+            <h2>Mes Services</h2>
             <div className="service-list">
                 {servicesData.map((service, index) => (
                     <div className="service-item" key={index}>

@@ -56,7 +56,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }
                 <button className="close-button" onClick={onClose} aria-label="Fermer la modale">
                     &times;
                 </button>
-                <h2>Contactez-nous</h2>
+                <h2>Contactez-moi</h2>
                 <form onSubmit={handleSubmit}>
                     <label>
                         Nom et prénom
@@ -113,6 +113,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }
                             value={formData.message}
                             onChange={handleChange}
                             placeholder="Votre message"
+                            rows={5}
                             required
                         />
                     </label>

@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  text-shadow: 0 0 5px black;
   padding: var(--spacing-large);
   background-color: var(--primary-color);
   color: #fff;
@@ -20,8 +21,8 @@
   }
 
   .profilePicture {
-    width: 50vw;
-    height: 18vh;
+    width: 150px;
+    height: 150px;
     border-radius: 10%;
     margin-bottom: 1rem;
     object-fit: cover;
@@ -37,6 +38,7 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 0 0px 10px 0px #0000008c;
 
     &:hover {
       background-color: ($primary-color, 10%);

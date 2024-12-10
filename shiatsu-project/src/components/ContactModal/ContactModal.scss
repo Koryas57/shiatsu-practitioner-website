@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,35 +12,62 @@
 }
 
 .modal {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+  background-color: rgb(230 203 199 / 80%);
   position: relative;
-  background: #fff;
-  border-radius: 8px;
+  border-radius: 25px; /* Coins arrondis */
   padding: 1.5rem;
-  width: 90%;
+  width: 95%;
   max-width: 500px;
   text-align: center;
+  overflow: hidden;
+
+  /* Effet lumineux autour du conteneur */
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+  animation: glow 2s infinite alternate ease-in-out;
 
   h2 {
     margin-bottom: 1rem;
+    text-shadow: 0 0 5px black;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0.5rem;
   }
 
   form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    position: relative;
 
     label {
       display: flex;
       flex-direction: column;
-      text-align: left;
+      background-color: var(--primary-color);
+      border-radius: 12px;
       gap: 0.5rem;
+      padding: 0.5rem 0 0;
+      box-shadow: 1px -1px 10px 0px rgba(255, 255, 255, 0.25);
     }
 
     input,
-    textarea {
+    textarea,
+    select {
       padding: 0.5rem;
-      border: 1px solid var(--secondary-color);
-      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 0 0 12px 12px;
+      resize: none;
+      background-color: white;
+      font-size: 1rem;
+      color: #000;
+
+      &::placeholder {
+        font-style: normal;
+        font-family: "Roboto", sans-serif;
+        font-size: 0.85rem;
+        color: #000;
+      }
     }
 
     .submit-button {
@@ -50,30 +77,37 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
-
-      &:hover {
-        background: var(--primary-color);
-      }
+      transition: all 0.3s ease;
     }
   }
 
   .close-button {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 1rem;
+    right: 1rem;
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--secondary-color);
-
-    &:hover {
-      color: var(--primary-color);
-    }
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 2px black;
   }
 
   .error-message {
     color: red;
     font-size: 0.9rem;
+  }
+}
+
+/* Keyframes pour l'animation lumineuse */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px 8px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
   }
 }

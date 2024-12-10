@@ -1,9 +1,9 @@
 .services {
-  margin: 50px auto;
+  margin: 1vh auto;
   text-align: center;
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 20px;
   }
 
@@ -30,19 +30,20 @@
       background: #fff;
       box-shadow: 0 0px 10px 0px #0000008c;
       & button {
-        background-color: #7f8c8d;
+        background-color: var(--primary-color);
         color: #fff;
         padding: 0.6rem 1rem;
         margin: 1.5rem auto 0;
         border-radius: 5px;
         border: none;
+        box-shadow: 0 0px 10px 0px #0000008c;
         cursor: pointer;
         transition: background-color 0.3s;
       }
 
       h3 {
         font-size: 1.5rem;
-        color: var(--primary-color);
+        color: var(--font-color);
         margin-bottom: 1rem;
       }
 
@@ -57,7 +58,7 @@
 
       p {
         font-size: 1rem;
-        color: var(--secondary-color);
+        color: var(--font-color);
       }
     }
   }
