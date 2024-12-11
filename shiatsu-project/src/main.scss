@@ -1,7 +1,7 @@
 // Variables SCSS
 $primary-color: #542567a8;
 $secondary-color: #dfbab0;
-$background-color: #e6cbc7;
+$background-color: rgb(241 249 251 / 96%);
 $darken-color: #07291c;
 $font-color: #333;
 
@@ -65,21 +65,22 @@ h3,
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 80vh;
+  width: 100vw;
   @media (min-width: 420px) {
-    height: 70vh;
   }
-  @media (max-width: 768px) {
-    margin: 9vh auto 0;
+  @media (min-width: 768px) {
+    max-width: 1440px;
+    height: 100vh;
   }
 }
 
 .intro-text {
   font-family: "Indie Flower", cursive;
-  padding: 25% 3rem;
+  padding: 15vh 3rem;
   margin: 0 auto;
   font-size: 1.2rem;
-  background-image: url("https://images.unsplash.com/photo-1504177151729-0e0600389766?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fHplbnxlbnwwfHwwfHx8Mg%3D%3D");
+  background-image: url("https://images.unsplash.com/photo-1532009877282-3340270e0529?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-repeat: no-repeat;
   text-shadow: -1px 2px 3px black;

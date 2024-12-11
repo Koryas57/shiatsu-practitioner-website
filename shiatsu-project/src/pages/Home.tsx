@@ -41,7 +41,6 @@ export const Home: React.FC = () => {
                 <section className="intro">
                     <div className="intro-text">
                         <h2>Bienvenue chez Shiatsu Yasmina</h2>
-                        <br />
                         <p>
                             Reconnectez-vous avec votre bien-être intérieur grâce au shiatsu, une discipline ancestrale qui équilibre corps et esprit. Découvrez des soins personnalisés pour apaiser le stress, soulager les tensions et retrouver votre harmonie naturelle
                         </p>

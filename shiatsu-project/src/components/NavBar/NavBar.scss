@@ -6,12 +6,12 @@ nav {
     border: none;
     background-color: transparent;
     font-size: 2rem;
-    color: var(--background-color);
+    color: #7e468f;
     cursor: pointer;
     padding: 0.1rem;
     margin: 1rem 1.5rem;
     & i {
-      text-shadow: 1px -1px 3px rgb(44, 16, 48);
+      text-shadow: -2px -1px 3px rgb(0, 0, 0);
     }
   }
 
@@ -28,7 +28,7 @@ nav {
 
   .menu-links {
     position: absolute;
-    top: 105%;
+    top: 90%;
     right: 0;
     background-color: var(--primary-color);
     width: max-content;
