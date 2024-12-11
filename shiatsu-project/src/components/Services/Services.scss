@@ -1,10 +1,11 @@
 .services {
-  margin: 1vh auto;
+  padding-bottom: 5vh;
   text-align: center;
+  background: var(--background-color);
 
   h2 {
     font-size: 1.75rem;
-    margin-bottom: 20px;
+    padding: 2.5vh 0;
   }
 
   .service-list {

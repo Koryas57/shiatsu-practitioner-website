@@ -7,7 +7,6 @@ import { Footer } from '../components/Footer/Footer';
 import { ContactModal } from '../components/ContactModal/ContactModal';
 import { ConfirmationModal } from '../components/ConfirmationModal/ConfirmationModal';
 import './Home.scss';
-import HandHealing from '../assets/HandHealing.jpg';
 import { Map } from '../components/Map/Map';
 import { PublicDetails } from '../components/PublicDetails/PublicDetails';
 
@@ -40,11 +39,11 @@ export const Home: React.FC = () => {
             <Header />
             <main className="main-content">
                 <section className="intro">
-                    <img src={HandHealing} alt="Soin des problèmes de poignet" />
                     <div className="intro-text">
                         <h2>Bienvenue chez Shiatsu Yasmina</h2>
+                        <br />
                         <p>
-                            Découvrez l'art japonais ancestral du shiatsu, une méthode conçue pour restaurer l'équilibre et l'harmonie entre le corps et l'esprit.
+                            Reconnectez-vous avec votre bien-être intérieur grâce au shiatsu, une discipline ancestrale qui équilibre corps et esprit. Découvrez des soins personnalisés pour apaiser le stress, soulager les tensions et retrouver votre harmonie naturelle
                         </p>
                     </div>
                 </section>
