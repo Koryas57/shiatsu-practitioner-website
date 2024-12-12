@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  z-index: 100;
   margin: 1rem 0.5rem;
   left: 0;
   display: flex;
@@ -27,7 +28,7 @@
     & h1 {
       font-style: oblique;
       font-size: 1.33rem;
-      font-weight: 400;
+      font-weight: 600;
       text-shadow: 0 0 1px rgb(165, 78, 177);
     }
     & p {
