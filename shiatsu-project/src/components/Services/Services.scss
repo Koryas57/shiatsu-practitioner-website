@@ -1,10 +1,11 @@
 .services {
   padding-bottom: 5vh;
   text-align: center;
-  background: url("https://images.unsplash.com/photo-1455243629161-1f993797f78d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHplbnxlbnwwfHwwfHx8Mg%3D%3D");
+  background: url("https://images.unsplash.com/photo-1634681896994-0027a701b1d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzI2fHxyZWxheGF0aW9ufGVufDB8fDB8fHwy");
   box-shadow: -1px -3px 5px 0px #000000a6;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100vw;
   border-radius: 25px 25px 0 0;
   position: relative;
@@ -14,14 +15,15 @@
     width: fit-content;
     padding: 0.025rem 1rem;
     margin: 0 auto;
-    background-color: #ffffffd4;
+    background: linear-gradient(192deg, #04161e, #393126);
+    background-size: cover;
     border-radius: 12px;
     box-shadow: -1px -1px 10px black;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     font-style: italic;
-    color: var(--font-color);
-    text-shadow: -1px 2px 3px rgb(255, 255, 255);
+    color: #ffffff;
+    text-shadow: 0 0 2px rgb(255 255 255);
     position: relative;
     top: 17px;
     z-index: 5;
@@ -39,7 +41,7 @@
     overflow: hidden;
     touch-action: pan-y;
 
-    .service-item {
+    .service-item-0 {
       position: absolute;
       width: 100%;
       max-width: 300px;
@@ -49,7 +51,9 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
-      background: #ffffffd4;
+      background: url("https://images.unsplash.com/photo-1546182208-1e70985e2bf3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVsZW1lbnRzfGVufDB8fDB8fHwy");
+      background-size: cover;
+      background-position: center;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       transition: transform 0.5s ease, opacity 0.5s ease;
@@ -83,10 +87,102 @@
         cursor: pointer;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         transition: background-color 0.3s ease;
+      }
+    }
 
-        &:hover {
-          background-color: rgba(34, 52, 70, 1);
-        }
+    .service-item-1 {
+      position: absolute;
+      width: 100%;
+      max-width: 300px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: #ffffffba;
+      background-size: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      text-align: center;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      img {
+        width: 100%;
+        height: 20vh;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: var(--font-color);
+      }
+
+      button {
+        background-color: rgba(44, 62, 80, 1);
+        color: #fff;
+        padding: 0.6rem 1rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      }
+    }
+
+    .service-item-2 {
+      position: absolute;
+      width: 100%;
+      max-width: 300px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: url("https://images.unsplash.com/photo-1544911898-af3d0a44f622?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjgyfHx6ZW58ZW58MHx8MHx8fDI%3D");
+      background-size: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      text-align: center;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      img {
+        width: 100%;
+        height: 20vh;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: var(--font-color);
+      }
+
+      button {
+        background-color: rgba(44, 62, 80, 1);
+        color: #fff;
+        padding: 0.6rem 1rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
       }
     }
   }
@@ -100,7 +196,7 @@
       width: 10px;
       height: 10px;
       margin: 0 5px;
-      background-color: rgba(44, 62, 80, 1);
+      background-color: #504331;
       border-radius: 50%;
       transition: background-color 0.3s ease, transform 0.3s ease;
 

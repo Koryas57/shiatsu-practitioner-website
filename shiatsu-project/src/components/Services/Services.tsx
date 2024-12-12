@@ -25,8 +25,8 @@ export const Services: React.FC = () => {
 
     useEffect(() => {
         const tiltInterval = setInterval(() => {
-            setDragOffset(-30);
-            setTimeout(() => setDragOffset(0), 600);
+            setDragOffset(30);
+            setTimeout(() => setDragOffset(0), 350);
         }, 6000);
 
         return () => clearInterval(tiltInterval);
@@ -75,7 +75,7 @@ export const Services: React.FC = () => {
                     return (
                         <div
                             key={index}
-                            className={`service-item ${isActive ? 'active' : ''}`}
+                            className={`service-item-${index} ${isActive ? 'active' : ''}`}
                             style={{
                                 transform: `translateX(${translateX}px) scale(${scale})`,
                                 opacity,
@@ -89,9 +89,6 @@ export const Services: React.FC = () => {
                         </div>
                     );
                 })}
-                {/* Gradient pour indiquer le défilement */}
-                <div className="gradient gradient-left"></div>
-                <div className="gradient gradient-right"></div>
             </div>
             {/* Pagination (points) */}
             <div className="pagination">
