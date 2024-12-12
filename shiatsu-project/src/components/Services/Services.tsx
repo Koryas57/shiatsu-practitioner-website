@@ -46,9 +46,11 @@ export const Services: React.FC = () => {
 
     const handleTouchEnd = () => {
         if (dragOffset > 50) {
-            setCurrentIndex((prevIndex) => (prevIndex - 1 + servicesData.length) % servicesData.length);
-        } else if (dragOffset < -50) {
+            // Progresser vers la droite (augmenter l'index) lorsqu'on swippe vers la gauche
             setCurrentIndex((prevIndex) => (prevIndex + 1) % servicesData.length);
+        } else if (dragOffset < -50) {
+            // Progresser vers la gauche (réduire l'index) lorsqu'on swippe vers la droite
+            setCurrentIndex((prevIndex) => (prevIndex - 1 + servicesData.length) % servicesData.length);
         }
         setDragOffset(0);
         setIsDragging(false);
