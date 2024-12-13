@@ -75,7 +75,7 @@ export const Services: React.FC = () => {
                     return (
                         <div
                             key={index}
-                            className={`service-item-${index} ${isActive ? 'active' : ''}`}
+                            className={`service-item ${isActive ? 'active' : ''}`}
                             style={{
                                 transform: `translateX(${translateX}px) scale(${scale})`,
                                 opacity,
