@@ -11,11 +11,18 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
-    padding: 0.5rem 0;
+    padding: 0.25rem 1rem;
     transition: all 0.3s ease;
+    margin: 0 auto;
+    background: linear-gradient(192deg, #04161eaf, #393126);
+    border-radius: 12px;
+    box-shadow: -1px -1px 10px black;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0 0 2px rgb(255 255 255);
   }
 
   .details-content {
@@ -42,6 +49,7 @@
         svg {
           margin-right: 0.5rem;
           color: var(--primary-color);
+          padding: 0.5rem;
         }
       }
 
