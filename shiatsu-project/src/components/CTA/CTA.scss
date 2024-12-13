@@ -7,7 +7,8 @@
   text-align: center;
   text-shadow: 0 0 5px black;
   padding: var(--spacing-large);
-  background-color: var(--primary-color);
+  background: url("https://images.unsplash.com/photo-1532009877282-3340270e0529?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8WkVOfGVufDB8fDB8fHwy");
+  background-size: cover;
   color: #fff;
 
   h2 {
@@ -23,7 +24,7 @@
   .profilePicture {
     width: 150px;
     height: 150px;
-    border-radius: 10%;
+    border-radius: 50%;
     margin-bottom: 1rem;
     object-fit: cover;
     box-shadow: 1px 1px 10px 0px rgba(255, 255, 255, 0.452);
@@ -38,10 +39,7 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    box-shadow: 0 0px 10px 0px #0000008c;
-
-    &:hover {
-      background-color: ($primary-color, 10%);
-    }
+    background: linear-gradient(192deg, #04161e, #393126);
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
   }
 }
