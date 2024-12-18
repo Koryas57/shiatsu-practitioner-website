@@ -28,12 +28,13 @@ nav {
 
   .menu-links {
     position: absolute;
-    top: 90%;
-    right: 0;
-    background-color: var(--primary-color);
+    top: 100%;
+    right: 35%;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 12px;
     width: max-content;
     min-width: 200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     display: none;
     flex-direction: column;
     list-style: none;
@@ -42,17 +43,18 @@ nav {
 
     &.menu-open {
       display: flex;
+      margin: 1vh 0;
     }
 
     li {
-      padding: 0 1rem;
-      &:hover {
-        background-color: var(--secondary-color);
-      }
+      text-align: right;
 
       a {
+        color: #7e468f;
         text-decoration: none;
-        color: #fff;
+        font-family: "Roboto", sans sérif;
+        font-size: 1.25rem;
+        font-weight: 600;
         display: block;
         padding: 1rem;
 
@@ -66,11 +68,11 @@ nav {
 
   @keyframes side-slide {
     from {
-      transform: translateX(105%);
+      transform: translateY(-45%);
       opacity: 0;
     }
     to {
-      transform: translateX(0);
+      transform: translateY(0);
       opacity: 1;
     }
   }

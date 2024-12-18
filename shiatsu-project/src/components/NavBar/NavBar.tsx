@@ -35,6 +35,11 @@ export const NavBar: React.FC = () => {
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink to="/diplomas" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
+                        Diplômes & Formations
+                    </NavLink>
+                </li>
+                <li>
                     <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
                         Contact
                     </NavLink>
