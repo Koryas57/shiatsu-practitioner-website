@@ -58,7 +58,7 @@ export const Services: React.FC = () => {
 
     return (
         <section className="services">
-            <h2>Mes Services</h2>
+            <h2>Mes Prestations</h2>
             <div
                 className="service-carousel"
                 onTouchStart={handleTouchStart}

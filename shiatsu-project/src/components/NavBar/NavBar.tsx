@@ -25,13 +25,18 @@ export const NavBar: React.FC = () => {
             {/* Menu déroulant */}
             <ul className={`menu-links ${isMenuOpen ? 'menu-open' : ''}`}>
                 <li>
-                    <NavLink to="/services" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
-                        Services
+                    <NavLink to="/" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
+                        Accueil
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/testimonials" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
-                        Témoignages
+                    <NavLink to="/prestations" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
+                        Mes Prestations
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/tarifs" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
+                        Tarifs
                     </NavLink>
                 </li>
                 <li>

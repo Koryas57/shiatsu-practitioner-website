@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { Header } from '../components/Header/Header';
-import { Services } from '../components/Services/Services';
-import { Testimonials } from '../components/Testimonials/Testimonials';
-import { CTA } from '../components/CTA/CTA';
-import { Footer } from '../components/Footer/Footer';
-import { ContactModal } from '../components/ContactModal/ContactModal';
-import { ConfirmationModal } from '../components/ConfirmationModal/ConfirmationModal';
+import { Header } from '../../components/Header/Header';
+import { Services } from '../../components/Services/Services';
+import { Testimonials } from '../../components/Testimonials/Testimonials';
+import { CTA } from '../../components/CTA/CTA';
+import { Footer } from '../../components/Footer/Footer';
+import { ContactModal } from '../../components/ContactModal/ContactModal';
+import { ConfirmationModal } from '../../components/ConfirmationModal/ConfirmationModal';
 import './Home.scss';
-import { Map } from '../components/Map/Map';
-import { PublicDetails } from '../components/PublicDetails/PublicDetails';
+import { Map } from '../../components/Map/Map';
+import { PublicDetails } from '../../components/PublicDetails/PublicDetails';
 
 
 
