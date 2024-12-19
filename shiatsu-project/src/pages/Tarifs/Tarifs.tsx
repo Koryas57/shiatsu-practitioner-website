@@ -33,11 +33,11 @@ export const Tarifs: React.FC = () => {
             <Header />
             <section className="tarifs">
                 {/* Titre avec animation */}
-                <h2 className="fade-in">Nos Tarifs</h2>
+                <h2 className="fade-in">Mes Tarifs</h2>
 
                 {/* Introduction */}
                 <p className="fade-in delay-1">
-                    Découvrez nos tarifs adaptés à tous. Que ce soit pour une séance de relaxation, un besoin thérapeutique ou des prestations en entreprise, trouvez ce qui vous convient le mieux.
+                    Découvrez mes tarifs adaptés à tous. Que ce soit pour une séance de relaxation, un besoin thérapeutique ou des prestations en entreprise, trouvez ce qui vous convient le mieux.
                 </p>
 
                 {/* Cartes de Tarifs */}
