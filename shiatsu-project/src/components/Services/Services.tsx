@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Services.scss';
 
 import Nenuphar from '../../assets/nenuphar2.jpg';
@@ -23,6 +24,8 @@ export const Services: React.FC = () => {
     const [isDragging, setIsDragging] = useState(false);
     const touchStartX = useRef<number | null>(null);
 
+    const navigate = useNavigate(); // Hook pour rediriger l'utilisateur
+
     useEffect(() => {
         const tiltInterval = setInterval(() => {
             setDragOffset(30);
@@ -46,14 +49,16 @@ export const Services: React.FC = () => {
 
     const handleTouchEnd = () => {
         if (dragOffset > 50) {
-            // Progresser vers la droite (augmenter l'index) lorsqu'on swippe vers la gauche
             setCurrentIndex((prevIndex) => (prevIndex + 1) % servicesData.length);
         } else if (dragOffset < -50) {
-            // Progresser vers la gauche (réduire l'index) lorsqu'on swippe vers la droite
             setCurrentIndex((prevIndex) => (prevIndex - 1 + servicesData.length) % servicesData.length);
         }
         setDragOffset(0);
         setIsDragging(false);
+    };
+
+    const handleLearnMoreClick = () => {
+        navigate('/prestations'); // Redirige vers la page "Mes Prestations"
     };
 
     return (
@@ -85,7 +90,7 @@ export const Services: React.FC = () => {
                             <h3>{service.title}</h3>
                             <img src={service.image} alt={service.title} />
                             <p>{service.description}</p>
-                            <button>En savoir plus</button>
+                            <button onClick={handleLearnMoreClick}>En savoir plus</button>
                         </div>
                     );
                 })}
