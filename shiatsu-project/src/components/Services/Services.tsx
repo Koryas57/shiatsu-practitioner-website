@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Services.scss';
 
-import Nenuphar from '../../assets/nenuphar.jpg';
+import Nenuphar from '../../assets/nenuphar2.jpg';
 import Skeleton from '../../assets/SkeletonMedicine.jpg';
 import BackHealing from '../../assets/BackHealing.jpg';
 

@@ -60,7 +60,9 @@ nav {
 
         &.link-active {
           font-weight: bold;
-          color: var(--font-color);
+          color: rgb(154 122 159);
+          text-decoration: underline;
+          text-underline-offset: 0.5vh;
         }
       }
     }
