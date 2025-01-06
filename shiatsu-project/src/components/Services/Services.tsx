@@ -129,7 +129,7 @@ export const Services: React.FC = () => {
                         className={`dot ${index === currentIndex ? 'active' : ''}`}
                         style={{
                             transition: index === currentIndex ? 'background-color 0.5s ease, transform 0.5s ease' : '',
-                            transform: index === currentIndex ? 'scale(1.3)' : 'scale(1)', // L'effet d'agrandissement pour le dot actif
+                            transform: index === currentIndex ? 'scale(1.3)' : 'scale(1)',
                         }}
                     ></span>
                 ))}

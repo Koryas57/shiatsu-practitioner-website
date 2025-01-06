@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Diplomas.scss';
 import EcolePeyrard from '../../assets/ecolePeyrardShiatsu.png';
 import CoursMinerve from '../../assets/CoursMinerve.jpg';
-import SportShiatsu from '../../assets/SportShiatsu.png'
+import SportShiatsu from '../../assets/SportShiatsu.avif'
 import LahochiSandra from '../../assets/LaochiSandra.jpg';
 import { Header } from '../../components/Header/Header';
 import { Footer } from '../../components/Footer/Footer';
@@ -70,7 +70,7 @@ export const Diplomas: React.FC = () => {
                             <ul>
                                 <li>Formation dispensée par Hervé Ligot (F.F.S.T.)</li>
                             </ul>
-                            <p>Yutz</p>
+                            <p>Paris</p>
                         </div>
                     </div>
                     <div className="diploma-card">

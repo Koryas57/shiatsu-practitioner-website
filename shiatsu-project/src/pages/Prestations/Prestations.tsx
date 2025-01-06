@@ -100,9 +100,6 @@ export const Prestations: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                <p className="cta-presta">
-                    Prenez rendez-vous dès maintenant pour explorer ces pratiques uniques et ressentir leurs bienfaits dès la première séance.
-                </p>
             </section>
             <CTA
                 title="Prêt(e) à commencer votre voyage ?"
