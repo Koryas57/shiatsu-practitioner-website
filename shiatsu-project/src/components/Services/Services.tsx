@@ -13,10 +13,36 @@ interface Service {
 }
 
 const servicesData: Service[] = [
-    { title: 'Shiatsu Relaxation', image: Nenuphar, description: 'Vivez une relaxation profonde et un soulagement du stress.' },
-    { title: 'Shiatsu Thérapeutique', image: BackHealing, description: 'Traitez des problèmes physiques ou émotionnels spécifiques.' },
-    { title: 'Équilibrage Énergétique', image: Skeleton, description: 'Restaurez l’harmonie du flux énergétique de votre corps.' },
+    {
+        title: 'Shiatsu',
+        image: Nenuphar,
+        description: `
+            Le Shiatsu est une méthode japonaise qui équilibre l’énergie du corps. 
+            Grâce à des pressions et étirements doux, il apaise les tensions et 
+            revitalise le corps pour une détente profonde.
+        `,
+    },
+    {
+        title: 'Lahochi',
+        image: BackHealing,
+        description: `
+            Le Lahochi est une technique énergétique douce qui harmonise le corps 
+            et l'esprit. Chaque séance dissipe les blocages et offre un bien-être 
+            profond et durable.
+        `,
+    },
+    {
+        title: 'Formation Lahochi',
+        image: Skeleton,
+        description: `
+            Initiez-vous au Lahochi en petits groupes de 3 à 5 personnes. Apprenez 
+            les bases de cette pratique énergétique et découvrez une expérience 
+            enrichissante et transformative.
+        `,
+    },
 ];
+
+
 
 export const Services: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

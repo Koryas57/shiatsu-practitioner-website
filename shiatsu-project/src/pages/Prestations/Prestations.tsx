@@ -18,27 +18,45 @@ interface Prestation {
 
 const prestationsData: Prestation[] = [
     {
-        title: 'Shiatsu Relaxation',
+        title: 'Shiatsu',
         image: Nenuphar,
         description: `
-        Le shiatsu relaxation est une invitation à un voyage intérieur. À travers des gestes précis et harmonieux, cette technique soulage les tensions accumulées, revitalise le corps et apaise l'esprit. Parfait pour ceux qui souhaitent déconnecter du stress quotidien, il vous offre un moment de sérénité absolue.
-        Vous sentez-vous souvent tendu ou débordé ? Prenez le temps de respirer et laissez notre expertise vous guider vers un mieux-être immédiat.`,
-    },
-    {
-        title: 'Shiatsu Thérapeutique',
-        image: BackHealing,
-        description: `
-        Le shiatsu thérapeutique va au-delà de la relaxation. Il agit sur les déséquilibres profonds du corps et de l'esprit en travaillant sur les méridiens énergétiques. Cette pratique, reconnue pour ses bienfaits, soulage efficacement les douleurs chroniques, le stress intense, et les troubles liés à la fatigue. En stimulant les points d'acupression, nous aidons votre corps à retrouver son équilibre naturel.
-        Une séance permet de rétablir un flux énergétique harmonieux, indispensable à votre bien-être. Croyez en votre potentiel de guérison.`,
+            Le Shiatsu est une pratique ancestrale japonaise qui combine des pressions 
+            manuelles, des étirements doux et des techniques spécifiques pour rétablir 
+            l'équilibre énergétique du corps. Cette méthode vise à soulager les tensions 
+            musculaires, améliorer la circulation énergétique et réduire le stress. 
+            Idéal pour apaiser le corps et revitaliser l'esprit, chaque séance est 
+            adaptée à vos besoins spécifiques pour une expérience profondément relaxante.
+        `,
     },
     {
         title: 'Lahochi',
+        image: BackHealing,
+        description: `
+            Le Lahochi est une technique énergétique puissante et douce, idéale pour 
+            harmoniser le corps et l'esprit. En utilisant une approche subtile, cette 
+            méthode aide à dissiper les blocages énergétiques et à stimuler le processus 
+            naturel de guérison. Chaque séance offre une reconnexion à votre énergie 
+            vitale, vous laissant apaisé et revitalisé. C’est une invitation à explorer 
+            un bien-être durable, tout en douceur et en profondeur.
+        `,
+    },
+    {
+        title: 'Formation Lahochi',
         image: Skeleton,
         description: `
-        Le Lahochi, issu de pratiques énergétiques ancestrales, est une méthode douce qui vise à harmoniser les énergies du corps. Contrairement au shiatsu, cette technique ne repose pas sur la pression, mais sur une approche subtile et intuitive.
-        C’est une expérience unique, profondément relaxante et réparatrice, qui s’adresse à ceux qui recherchent un apaisement spirituel autant que physique. Laissez-vous surprendre par cette connexion profonde entre votre corps et votre esprit.`,
+            La formation Lahochi vous offre une initiation complète à cette technique 
+            énergétique accessible et puissante. En petits groupes de 3 à 5 personnes, 
+            vous apprendrez les bases des positions des mains, les protocoles de soin et 
+            l’aspect spirituel de cette méthode. Cette formation immersive permet de 
+            pratiquer sur soi-même et sur autrui, en apportant équilibre et sérénité. 
+            Repartez avec des outils pratiques pour diffuser l’énergie réparatrice et 
+            renforcer votre connexion intérieure.
+        `,
     },
 ];
+
+
 
 
 export const Prestations: React.FC = () => {
