@@ -35,7 +35,7 @@ const servicesData: Service[] = [
         title: 'Formation Lahochi',
         image: Skeleton,
         description: `
-            Initiez-vous au Lahochi en petits groupes de 3 à 5 personnes. Apprenez 
+            Initiez-vous au Lahochi en petits groupes de 2 à 6 personnes. Apprenez 
             les bases de cette pratique énergétique et découvrez une expérience 
             enrichissante et transformative.
         `,

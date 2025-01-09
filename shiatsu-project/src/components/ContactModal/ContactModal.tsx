@@ -100,9 +100,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }
                             required
                         >
                             <option value="">Sélectionnez un motif</option>
-                            <option value="Relaxation">Relaxation</option>
-                            <option value="Gestion du stress">Gestion du stress</option>
-                            <option value="Douleurs corporelles">Douleurs corporelles</option>
+                            <option value="Shiatsu">Shiatsu</option>
+                            <option value="Lahochi">Lahochi</option>
+                            <option value="Formation Lahochi">Formation Lahochi</option>
                             <option value="Autre">Autre</option>
                         </select>
                     </label>

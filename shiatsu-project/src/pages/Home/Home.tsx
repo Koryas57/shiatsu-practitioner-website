@@ -47,8 +47,8 @@ export const Home: React.FC = () => {
                     </div>
                 </section>
                 <Services />
-                <Testimonials />
                 <PublicDetails />
+                <Testimonials />
                 <CTA
                     title="Prêt(e) à commencer votre voyage ?"
                     buttonText="Réserver une séance"
