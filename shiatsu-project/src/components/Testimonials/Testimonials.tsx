@@ -9,17 +9,17 @@ interface Testimonial {
 
 const testimonialsData: Testimonial[] = [
     {
-        quote: 'Shiatsu Yasmina a transformé ma qualité de vie. Je recommande vivement !',
-        author: 'Anonyme',
+        quote: 'Yasmina a transformé ma qualité de vie. Je recommande vivement !',
+        author: 'Sophie B.',
         rating: 5,
     },
     {
-        quote: 'Une expérience incroyable. Je me sens en pleine forme.',
+        quote: 'Une expérience incroyable. Je me sens en pleine forme, merci Yasmina !',
         author: 'Marie L.',
         rating: 4,
     },
     {
-        quote: 'Un excellent service, je me sens revigoré(e) !',
+        quote: ' Je recommande à ceux qui hésitent de franchir le pas, car c’est une expérience qui mérite d’être vécue au moins une fois dans sa vie.',
         author: 'Paul T.',
         rating: 5,
     },
