@@ -46,7 +46,7 @@ const prestationsData: Prestation[] = [
         image: Skeleton,
         description: `
             La formation Lahochi vous offre une initiation complète à cette technique 
-            énergétique accessible et puissante. En petits groupes de 3 à 5 personnes, 
+            énergétique accessible et puissante. En petits groupes de 2 à 6 personnes, 
             vous apprendrez les bases des positions des mains, les protocoles de soin et 
             l’aspect spirituel de cette méthode. Cette formation immersive permet de 
             pratiquer sur soi-même et sur autrui, en apportant équilibre et sérénité. 

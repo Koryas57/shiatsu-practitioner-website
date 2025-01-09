@@ -70,7 +70,6 @@ export const Diplomas: React.FC = () => {
                             <ul>
                                 <li>Formation dispensée par Hervé Ligot (F.F.S.T.)</li>
                             </ul>
-                            <p>Paris</p>
                         </div>
                     </div>
                     <div className="diploma-card">

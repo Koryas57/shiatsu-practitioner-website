@@ -19,7 +19,7 @@ const testimonialsData: Testimonial[] = [
         rating: 4,
     },
     {
-        quote: ' Je recommande à ceux qui hésitent de franchir le pas, car c’est une expérience qui mérite d’être vécue au moins une fois dans sa vie.',
+        quote: ' Je recommande à ceux qui hésitent de franchir le pas, car c’est une expérience qui mérite d’être vécue',
         author: 'Paul T.',
         rating: 5,
     },

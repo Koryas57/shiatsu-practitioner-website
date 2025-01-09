@@ -28,7 +28,9 @@ export const Footer: React.FC = () => {
                 <div className="footer-section">
                     <h3>Suivez-nous</h3>
                     <div className="social-links">
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <a href="
+                        https://www.facebook.com/people/Shiatsu-Yasmina-Cobelli/61565052204470/?sk=reels_tab"
+                            target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-facebook-f facebook-icon"></i> Facebook
                         </a>
                         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
