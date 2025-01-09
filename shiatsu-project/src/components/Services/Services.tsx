@@ -42,15 +42,13 @@ const servicesData: Service[] = [
     },
 ];
 
-
-
 export const Services: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [dragOffset, setDragOffset] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
     const touchStartX = useRef<number | null>(null);
 
-    const navigate = useNavigate(); // Hook pour rediriger l'utilisateur
+    const navigate = useNavigate();
 
     useEffect(() => {
         const tiltInterval = setInterval(() => {
@@ -75,16 +73,18 @@ export const Services: React.FC = () => {
 
     const handleTouchEnd = () => {
         if (dragOffset > 50) {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % servicesData.length);
-        } else if (dragOffset < -50) {
+            // Swiper vers la droite -> afficher l'élément précédent
             setCurrentIndex((prevIndex) => (prevIndex - 1 + servicesData.length) % servicesData.length);
+        } else if (dragOffset < -50) {
+            // Swiper vers la gauche -> afficher l'élément suivant
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % servicesData.length);
         }
         setDragOffset(0);
         setIsDragging(false);
     };
 
     const handleLearnMoreClick = () => {
-        navigate('/prestations'); // Redirige vers la page "Mes Prestations"
+        navigate('/prestations');
     };
 
     return (
@@ -121,14 +121,13 @@ export const Services: React.FC = () => {
                     );
                 })}
             </div>
-            {/* Pagination (points) */}
             <div className="pagination">
                 {servicesData.map((_, index) => (
                     <span
                         key={index}
                         className={`dot ${index === currentIndex ? 'active' : ''}`}
                         style={{
-                            transition: index === currentIndex ? 'background-color 0.5s ease, transform 0.5s ease' : '',
+                            transition: 'transform 1s ease, background-color 1s ease',
                             transform: index === currentIndex ? 'scale(1.3)' : 'scale(1)',
                         }}
                     ></span>
