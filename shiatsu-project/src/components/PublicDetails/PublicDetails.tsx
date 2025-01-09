@@ -19,7 +19,7 @@ export const PublicDetails: React.FC = () => {
     return (
         <section className="public-details">
             <h2 onClick={toggleExpand} className="toggle-header">
-                Informations pratiques{' '}
+                Infos pratiques{' '}
                 <FontAwesomeIcon icon={isExpanded ? faChevronUp : faChevronDown} />
             </h2>
             <div className={`details-content ${isExpanded ? 'expanded' : ''}`}>

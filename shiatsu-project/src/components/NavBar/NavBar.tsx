@@ -31,7 +31,7 @@ export const NavBar: React.FC = () => {
                 </li>
                 <li>
                     <NavLink to="/prestations" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
-                        Mes Prestations
+                        Prestations
                     </NavLink>
                 </li>
                 <li>
