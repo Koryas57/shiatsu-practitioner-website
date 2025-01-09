@@ -66,7 +66,7 @@ export const Tarifs: React.FC = () => {
                 <section className="paiements fade-in delay-3">
                     <h3>Modes de Paiement Acceptés</h3>
                     <ul>
-                        <li>💳 Chèques</li>
+                        <li>✒️ Chèques</li>
                         <li>💶 Espèces</li>
                     </ul>
                 </section>

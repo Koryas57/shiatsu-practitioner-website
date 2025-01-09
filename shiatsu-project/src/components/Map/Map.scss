@@ -7,10 +7,13 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.5490196078);
+  cursor: pointer; /* Ajoute un pointeur au survol */
+
   & iframe {
     border: none;
     object-fit: cover;
     height: 100%;
     width: 100%;
+    pointer-events: none; /* Évite l'interaction directe avec l'iframe */
   }
 }

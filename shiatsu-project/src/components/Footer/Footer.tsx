@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
                     <p>
                         <i className="fas fa-phone-alt"></i>
                         Téléphone :
-                        <a href="tel:+123456789"> +33 6 63 43 02 41</a>
+                        <a href="tel:+33 6 63 43 02 41 "> +33 6 63 43 02 41</a>
                     </p>
                     <p>
                         <i className="fas fa-envelope"></i>
