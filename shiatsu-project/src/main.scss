@@ -66,8 +66,6 @@ h3,
   flex-direction: column;
   height: 90vh;
   width: 100vw;
-  @media (min-width: 420px) {
-  }
   @media (min-width: 768px) {
     max-width: 1440px;
     height: 100vh;
@@ -87,10 +85,41 @@ h3,
   color: white;
   height: 100%;
   text-align: center;
+  width: 100%;
   & h2 {
     padding-bottom: 3rem;
   }
   & p {
+    font-size: 1.4rem;
     text-shadow: 0 0 10px #2b2b2b;
+  }
+  @media (min-width: 440px) {
+    background-position: 75%;
+    & h2 {
+      padding-top: 2vh;
+    }
+    & p {
+      max-width: 75vw;
+      margin: 0 auto;
+      font-size: 1.6rem;
+    }
+  }
+  @media (min-width: 613px) {
+    padding: 20vh 3rem;
+  }
+  @media (min-width: 768px) {
+    padding: 25vh 5rem;
+  }
+  @media (min-width: 1040px) {
+    background-position: 75%;
+    & h2 {
+      padding-top: 0.5vh;
+    }
+    & p {
+      padding: 5vw 0;
+      max-width: 56vw;
+      margin: 0 auto;
+      font-size: 1.8rem;
+    }
   }
 }

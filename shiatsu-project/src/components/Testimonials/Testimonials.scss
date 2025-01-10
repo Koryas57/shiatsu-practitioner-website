@@ -5,6 +5,10 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 800px;
+  @media (min-width: 768px) {
+    box-shadow: none;
+    margin-bottom: 2vh;
+  }
 
   h2 {
     width: fit-content;

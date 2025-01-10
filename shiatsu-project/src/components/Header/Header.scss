@@ -1,8 +1,9 @@
 .header {
   position: fixed;
   z-index: 100;
-  margin: 1rem 0.5rem;
-  left: 0;
+  margin: 1rem auto;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +12,7 @@
   background-color: rgb(241 249 251 / 80%);
   color: var(--primary-color);
   width: 96vw;
+  max-width: 1280px;
   height: 9vh;
 
   & img {
@@ -46,6 +48,14 @@
       }
       & p {
         font-size: 1rem;
+      }
+    }
+    @media (min-width: 768px) {
+      & h1 {
+        font-size: 1.9rem;
+      }
+      & p {
+        font-size: 1.3rem;
       }
     }
   }

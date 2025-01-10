@@ -79,7 +79,7 @@ nav {
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     .menu-toggle {
       display: none;
     }
@@ -90,12 +90,10 @@ nav {
       flex-direction: row;
       background: none;
       box-shadow: none;
+      margin-right: 2vw;
 
       li a {
-        padding: 0;
-        &.link-active {
-          border-bottom: 2px solid var(--secondary-color);
-        }
+        padding: 0 2vw;
       }
     }
   }
