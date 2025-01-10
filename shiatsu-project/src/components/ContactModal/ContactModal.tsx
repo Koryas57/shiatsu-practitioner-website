@@ -10,7 +10,7 @@ interface ContactModalProps {
 export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }) => {
     const [formData, setFormData] = useState({
         name: '',
-        email: '', // Ajout du champ email
+        email: '',
         phone: '',
         reason: '',
         message: ''
@@ -29,23 +29,32 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }
         setError(null);
 
         try {
+            // Utilisation des variables d'environnement
+            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const userId = import.meta.env.VITE_EMAILJS_USER_ID;
+
+            if (!serviceId || !templateId || !userId) {
+                throw new Error("Les variables d'environnement EmailJS ne sont pas configurées.");
+            }
+
             await emailjs.send(
-                'service_dnk3had', // Remplace par ton Service ID
-                'template_j9a8b9j', // Remplace par ton Template ID
+                serviceId,
+                templateId,
                 {
                     from_name: formData.name,
-                    email: formData.email, // Inclure l'email saisi
+                    email: formData.email,
                     phone: formData.phone,
                     reason: formData.reason,
                     message: formData.message,
                 },
-                'bf7bZryHTyTMYChYv' // Remplace par ton User ID
+                userId
             );
             setIsLoading(false);
             onConfirm();
         } catch (error) {
             setIsLoading(false);
-            setError('Une erreur est survenue. Veuillez réessayer.');
+            setError("Une erreur est survenue. Veuillez réessayer.");
         }
     };
 
@@ -118,7 +127,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }
                         />
                     </label>
                     <button type="submit" className="submit-button" disabled={isLoading}>
-                        {isLoading ? 'Envoi en cours...' : 'Envoyer'}
+                        {isLoading ? "Envoi en cours..." : "Envoyer"}
                     </button>
                     {error && <p className="error-message">{error}</p>}
                 </form>
