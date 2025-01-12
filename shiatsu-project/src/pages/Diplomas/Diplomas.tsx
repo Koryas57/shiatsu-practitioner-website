@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Diplomas.scss';
-import EcolePeyrard from '../../assets/ecolePeyrardShiatsu.png';
-import CoursMinerve from '../../assets/CoursMinerve.jpg';
-import SportShiatsu from '../../assets/SportShiatsu.avif'
-import LahochiSandra from '../../assets/LaochiSandra.jpg';
+import EcolePeyrard from '../../assets/ecolePeyrardShiatsu_4_11zon.webp';
+import CoursMinerve from '../../assets/CoursMinerve_3_11zon.webp';
+import SportShiatsu from '../../assets/SportShiatsu_29_11zon.webp'
+import LahochiSandra from '../../assets/LaochiSandra_17_11zon.webp';
 import { Header } from '../../components/Header/Header';
 import { Footer } from '../../components/Footer/Footer';
 import { CTA } from '../../components/CTA/CTA';

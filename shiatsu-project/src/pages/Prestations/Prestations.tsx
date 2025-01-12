@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Prestations.scss';
 
-import Nenuphar from '../../assets/nenuphar2.jpg';
-import BackHealing from '../../assets/BackHealing.jpg';
-import Skeleton from '../../assets/SkeletonMedicine.jpg';
+import Nenuphar from '../../assets/nenuphar2_21_11zon.webp';
+import BackHealing from '../../assets/BackHealing_1_11zon.webp';
+import Skeleton from '../../assets/SkeletonMedicine_28_11zon.webp';
 import { CTA } from '../../components/CTA/CTA';
 import { Footer } from '../../components/Footer/Footer';
 import { ContactModal } from '../../components/ContactModal/ContactModal';

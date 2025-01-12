@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { NavBar } from '../NavBar/NavBar';
 import './Header.scss';
-import Logo from "../../assets/logoPractitioner.jpeg"
+import Logo from "../../assets/logoPractitioner2_19_11zon.webp"
 
 export const Header: React.FC = () => {
     return (

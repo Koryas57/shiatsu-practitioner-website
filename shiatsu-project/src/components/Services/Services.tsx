@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Services.scss';
 
-import Nenuphar from '../../assets/nenuphar2.jpg';
-import Skeleton from '../../assets/SkeletonMedicine.jpg';
-import BackHealing from '../../assets/BackHealing.jpg';
+import Nenuphar from '../../assets/nenuphar2_21_11zon.webp';
+import Skeleton from '../../assets/SkeletonMedicine_28_11zon.webp';
+import BackHealing from '../../assets/BackHealing_1_11zon.webp';
 
 interface Service {
     title: string;

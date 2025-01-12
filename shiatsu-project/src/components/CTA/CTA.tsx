@@ -1,6 +1,6 @@
 import React from 'react';
 import './CTA.scss';
-import profilePicture from '../../assets/practitionerPicture.jpeg'
+import profilePicture from '../../assets/practitionerPicture_22_11zon.webp'
 
 interface CTAProps {
     title: string;
