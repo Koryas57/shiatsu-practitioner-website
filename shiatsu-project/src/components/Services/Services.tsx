@@ -52,7 +52,7 @@ export const Services: React.FC = () => {
 
     useEffect(() => {
         const tiltInterval = setInterval(() => {
-            setDragOffset(30);
+            setDragOffset(-30);
             setTimeout(() => setDragOffset(0), 350);
         }, 6000);
 
@@ -85,6 +85,10 @@ export const Services: React.FC = () => {
 
     const handleLearnMoreClick = () => {
         navigate('/prestations');
+    };
+
+    const handleDotClick = (index: number) => {
+        setCurrentIndex(index); // Naviguer vers le service correspondant au dot
     };
 
     return (
@@ -130,6 +134,7 @@ export const Services: React.FC = () => {
                             transition: 'transform 1s ease, background-color 1s ease',
                             transform: index === currentIndex ? 'scale(1.3)' : 'scale(1)',
                         }}
+                        onClick={() => handleDotClick(index)}
                     ></span>
                 ))}
             </div>
