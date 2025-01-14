@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Prestations.scss';
 
-import Nenuphar from '../../assets/nenuphar2_21_11zon.webp';
-import BackHealing from '../../assets/BackHealing_1_11zon.webp';
-import Skeleton from '../../assets/SkeletonMedicine_28_11zon.webp';
+import Shiatsu from '../../assets/Shiatsu.webp';
+import Lahochi from '../../assets/Lahochi.webp';
+import FormationLahochi from '../../assets/formationLahochi.webp';
 import { CTA } from '../../components/CTA/CTA';
 import { Footer } from '../../components/Footer/Footer';
 import { ContactModal } from '../../components/ContactModal/ContactModal';
@@ -19,7 +19,7 @@ interface Prestation {
 const prestationsData: Prestation[] = [
     {
         title: 'Shiatsu',
-        image: Nenuphar,
+        image: Shiatsu,
         description: `
             Le Shiatsu est une pratique ancestrale japonaise qui combine des pressions 
             manuelles, des étirements doux et des techniques spécifiques pour rétablir 
@@ -31,7 +31,7 @@ const prestationsData: Prestation[] = [
     },
     {
         title: 'Lahochi',
-        image: BackHealing,
+        image: Lahochi,
         description: `
             Le Lahochi est une technique énergétique puissante et douce, idéale pour 
             harmoniser le corps et l'esprit. En utilisant une approche subtile, cette 
@@ -43,7 +43,7 @@ const prestationsData: Prestation[] = [
     },
     {
         title: 'Formation Lahochi',
-        image: Skeleton,
+        image: FormationLahochi,
         description: `
             La formation Lahochi vous offre une initiation complète à cette technique 
             énergétique accessible et puissante. En petits groupes de 2 à 6 personnes, 

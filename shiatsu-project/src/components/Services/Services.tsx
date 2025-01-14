@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Services.scss';
 
-import Nenuphar from '../../assets/nenuphar2_21_11zon.webp';
-import Skeleton from '../../assets/SkeletonMedicine_28_11zon.webp';
-import BackHealing from '../../assets/BackHealing_1_11zon.webp';
+import Shiatsu from '../../assets/Shiatsu.webp';
+import Lahochi from '../../assets/Lahochi.webp';
+import FormationLahochi from '../../assets/formationLahochi.webp';
 
 interface Service {
     title: string;
@@ -15,7 +15,7 @@ interface Service {
 const servicesData: Service[] = [
     {
         title: 'Shiatsu',
-        image: Nenuphar,
+        image: Shiatsu,
         description: `
             Le Shiatsu est une méthode japonaise qui équilibre l’énergie du corps. 
             Grâce à des pressions et étirements doux, il apaise les tensions et 
@@ -24,7 +24,7 @@ const servicesData: Service[] = [
     },
     {
         title: 'Lahochi',
-        image: BackHealing,
+        image: Lahochi,
         description: `
             Le Lahochi est une technique énergétique douce qui harmonise le corps 
             et l'esprit. Chaque séance dissipe les blocages et offre un bien-être 
@@ -33,7 +33,7 @@ const servicesData: Service[] = [
     },
     {
         title: 'Formation Lahochi',
-        image: Skeleton,
+        image: FormationLahochi,
         description: `
             Initiez-vous au Lahochi en petits groupes de 2 à 6 personnes. Apprenez 
             les bases de cette pratique énergétique et découvrez une expérience 
