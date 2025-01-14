@@ -9,18 +9,18 @@ interface Testimonial {
 
 const testimonialsData: Testimonial[] = [
     {
-        quote: 'Yasmina a transformé ma qualité de vie. Je recommande vivement !',
-        author: 'Sophie B.',
+        quote: 'J\'ai consulté Yasmina a plusieurs reprises pour des problèmes d\'angoisse de stresse et d insomnie et j\'en suis très contente. Praticienne a l\'écoute qui prend le tps de bien expliquer. En plus de soulager c\'est un pure moment de détente et de relaxation. Je recommande vivement.',
+        author: 'Sylvia A.',
         rating: 5,
     },
     {
-        quote: 'Une expérience incroyable. Je me sens en pleine forme, merci Yasmina !',
-        author: 'Marie L.',
-        rating: 4,
+        quote: 'Très professionnelle, très douce et à l’écoute de son client. N’hésitez pas à aller faire une séance',
+        author: 'Eva L.',
+        rating: 5,
     },
     {
-        quote: ' Je recommande à ceux qui hésitent de franchir le pas, car c’est une expérience qui mérite d’être vécue',
-        author: 'Paul T.',
+        quote: 'Super praticienne , très professionnelle,  elle m as soulagé mes maux suite à mon syndrome ainsi qu à mon état psychologique. Je l as recommande à 💯 %',
+        author: 'Christelle C.',
         rating: 5,
     },
 ];
