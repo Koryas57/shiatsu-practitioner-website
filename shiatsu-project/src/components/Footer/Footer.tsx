@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
                     <p>
                         <i className="fas fa-envelope"></i>
                         Email :
-                        <a href="mailto:contact@shiatsu-bienetre.com"> shiatsu.yasmina@gmail.com</a>
+                        <a href="mailto:shiatsu.yasmina@gmail.com"> shiatsu.yasmina@gmail.com</a>
                     </p>
                 </div>
                 <div className="footer-section">
