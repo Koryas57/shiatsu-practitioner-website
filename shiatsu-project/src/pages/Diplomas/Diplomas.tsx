@@ -84,7 +84,7 @@ export const Diplomas: React.FC = () => {
                 </div>
             </section>
             <CTA
-                title="Prêt(e) à commencer votre voyage ?"
+                title="Prêt(e) à prendre soin de vous ?"
                 buttonText="Réserver une séance"
                 onButtonClick={handleCTAClick}
             />

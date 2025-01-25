@@ -28,7 +28,7 @@ const testimonialsData: Testimonial[] = [
 export const Testimonials: React.FC = () => {
     return (
         <section className="testimonials">
-            <h2>Vos avis clients</h2>
+            <h2>Avis clients</h2>
             <div className="testimonial-list">
                 {testimonialsData.map((testimonial, index) => {
                     const authorInitial = testimonial.author.charAt(0).toUpperCase(); // Première lettre de l'auteur

@@ -81,7 +81,7 @@ export const Tarifs: React.FC = () => {
                 </section>
             </section>
             <CTA
-                title="Prêt(e) à commencer votre voyage ?"
+                title="Prêt(e) à prendre soin de vous ?"
                 buttonText="Réserver une séance"
                 onButtonClick={handleCTAClick}
             />
