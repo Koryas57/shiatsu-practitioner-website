@@ -92,8 +92,9 @@ export const Services: React.FC = () => {
     };
 
     return (
-        <section className="services">
-            <h2>Mes Prestations</h2>
+        <section className="services" id="prestations" aria-labelledby="services-title">
+            <span className="section-kicker">Prendre soin de soi</span>
+            <h2 id="services-title">Mes prestations</h2>
             <div
                 className="service-carousel"
                 onTouchStart={handleTouchStart}

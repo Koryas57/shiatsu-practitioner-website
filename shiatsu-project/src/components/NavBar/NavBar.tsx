@@ -14,16 +14,22 @@ export const NavBar: React.FC = () => {
     };
 
     return (
-        <nav>
-            <button className="menu-toggle" onClick={toggleMenu}>
-                <i className="fas fa-bars menu-icon"></i>
+        <nav aria-label="Navigation principale">
+            <button
+                className="menu-toggle"
+                onClick={toggleMenu}
+                aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+                aria-expanded={isMenuOpen}
+                aria-controls="main-menu"
+            >
+                <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} menu-icon`} aria-hidden="true"></i>
             </button>
 
             {/* Overlay pour fermer le menu en cliquant en dehors */}
             {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
 
             {/* Menu déroulant */}
-            <ul className={`menu-links ${isMenuOpen ? 'menu-open' : ''}`}>
+            <ul id="main-menu" className={`menu-links ${isMenuOpen ? 'menu-open' : ''}`}>
                 <li>
                     <NavLink to="/" onClick={closeMenu} className={({ isActive }) => (isActive ? 'link-active' : '')}>
                         Accueil

@@ -18,11 +18,17 @@ export const PublicDetails: React.FC = () => {
 
     return (
         <section className="public-details">
-            <h2 onClick={toggleExpand} className="toggle-header">
+            <button
+                type="button"
+                onClick={toggleExpand}
+                className="toggle-header"
+                aria-expanded={isExpanded}
+                aria-controls="practical-details"
+            >
                 Infos pratiques {' '}
                 <FontAwesomeIcon className='toggle-header-icon' icon={isExpanded ? faChevronUp : faChevronDown} />
-            </h2>
-            <div className={`details-content ${isExpanded ? 'expanded' : ''}`}>
+            </button>
+            <div id="practical-details" className={`details-content ${isExpanded ? 'expanded' : ''}`}>
                 <div className="detail">
                     <h3>
                         <FontAwesomeIcon icon={faUser} /> Type de public

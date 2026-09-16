@@ -1,90 +1,91 @@
 .prestations {
-  padding: 15vh 2rem 2rem;
+  min-height: 100vh;
+  padding: 9.5rem 1rem 6rem;
+  background:
+    radial-gradient(circle at 90% 4%, rgba(156, 172, 154, 0.26), transparent 24rem),
+    var(--paper);
   text-align: center;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.25), transparent);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
 
-  h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
+.prestations > h2 {
+  color: var(--ink);
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.prestations > .intro {
+  display: block;
+  min-height: 0;
+  max-width: 690px;
+  margin: 1.2rem auto 3rem;
+  overflow: visible;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.prestation-list {
+  display: grid;
+  gap: 1.2rem;
+  width: min(1050px, 100%);
+  margin-inline: auto;
+}
+
+.prestation-item {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-large);
+  background: var(--paper-bright);
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+
+.prestation-item > img {
+  width: 100%;
+  height: 17rem;
+  object-fit: cover;
+}
+
+.prestation-details {
+  padding: 1.5rem;
+}
+
+.prestation-details h3 {
+  margin-bottom: 0.8rem;
+  color: var(--ink);
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+
+.prestation-details p {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+@media (min-width: 780px) {
+  .prestations {
+    padding-top: 11rem;
   }
 
-  .intro {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    color: var(--font-color);
+  .prestation-item {
+    grid-template-columns: minmax(17rem, 0.85fr) 1.15fr;
+    align-items: stretch;
   }
 
-  .prestation-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-
-    .prestation-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      max-width: 350px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      padding: 1rem;
-
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-      }
-
-      .prestation-details {
-        text-align: left;
-        h3 {
-          font-size: 1.5rem;
-          color: var(--primary-color);
-          margin-bottom: 1rem;
-        }
-
-        p {
-          font-size: 1rem;
-          line-height: 1.5;
-          color: var(--font-color);
-        }
-      }
-    }
+  .prestation-item:nth-child(even) > img {
+    order: 2;
   }
 
-  .cta-presta {
-    font-family: "Indie Flower";
-    margin-top: 3rem;
-    background: linear-gradient(25deg, rgba(73, 99, 77, 0.301), white);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    border-radius: 12px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  .prestation-item > img {
+    height: 100%;
+    min-height: 25rem;
+  }
 
-    font-size: 1.2rem;
-    color: var(--font-color);
-    font-weight: bold;
-    line-height: 1.6;
-
-    &:hover {
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-    }
+  .prestation-details {
+    align-self: center;
+    padding: clamp(2rem, 5vw, 4rem);
   }
 }

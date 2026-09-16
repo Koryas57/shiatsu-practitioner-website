@@ -1,125 +1,138 @@
-// Variables SCSS
-$primary-color: #542567a8;
-$secondary-color: #dfbab0;
-$background-color: rgb(241 249 251 / 96%);
-$font-color: #333;
-
-// Exposer les variables SCSS comme des variables CSS
 :root {
-  --primary-color: #{$primary-color};
-  --secondary-color: #{$secondary-color};
-  --background-color: #{$background-color};
-  --font-color: #{$font-color};
+  --ink: #613b69;
+  --ink-deep: #2f2035;
+  --paper: #f7f2e9;
+  --paper-bright: #fffdf9;
+  --clay: #84508a;
+  --clay-dark: #66346d;
+  --sage: #9cac9a;
+  --line: #d9cfc0;
+  --muted: #635f59;
+  --shadow: 0 20px 60px rgba(47, 32, 53, 0.1);
+  --shadow-soft: 0 10px 35px rgba(47, 32, 53, 0.07);
+  --radius-large: 2rem;
+  --radius-medium: 1.25rem;
+  --primary-color: var(--ink);
+  --secondary-color: var(--clay);
+  --background-color: var(--paper);
+  --font-color: #2d3331;
+  --font-display: "Fraunces", Georgia, serif;
 }
 
-// Mixin pour les couleurs dynamiques
-@mixin dynamic-color($color, $darken-color) {
-  background-color: $color;
-  &:hover {
-    background-color: ($color, $darken-color);
-  }
-}
-
-// Reset de base
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {
+  min-width: 320px;
   margin: 0;
-  max-width: 1440px;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  background-color: var(--background-color);
+  background: var(--paper);
   color: var(--font-color);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "DM Sans", Arial, sans-serif;
 }
 
 h1,
 h2,
 h3,
 .logo {
-  font-family: "Lora", serif;
-  & p {
-    font-family: "Indie Flower", cursive;
-  }
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 450;
+  letter-spacing: 0.01em;
+  line-height: 1.12;
+  text-wrap: balance;
 }
 
-// Typographie responsive pour les grands écrans
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.main-content {
+  overflow: hidden;
+}
+
+.container {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.section-kicker {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--clay-dark);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
   body {
-    font-size: 1.2rem;
-    margin: 0 auto;
+    font-size: 1.05rem;
+  }
+
+  .container {
+    width: min(1180px, calc(100% - 5rem));
   }
 }
 
-// Classes utilitaires
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-.main-content .intro {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  height: 90vh;
-  width: 100vw;
-  @media (min-width: 768px) {
-    max-width: 1440px;
-    height: 100vh;
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-}
 
-.intro-text {
-  font-family: "Indie Flower", cursive;
-  padding: 16vh 3rem;
-  margin: 0 auto;
-  font-size: 1.3rem;
-  background-image: url("https://i.postimg.cc/CKpH3pBJ/intro-Txt-Img-16-11zon.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: 7%;
-  text-shadow: -1px 2px 3px black;
-  color: white;
-  height: 100%;
-  text-align: center;
-  width: 100%;
-  & h2 {
-    padding-bottom: 3rem;
-  }
-  & p {
-    font-size: 1.4rem;
-    text-shadow: 0 0 10px #2b2b2b;
-  }
-  @media (min-width: 440px) {
-    background-position: 75%;
-    & h2 {
-      padding-top: 2vh;
-    }
-    & p {
-      max-width: 75vw;
-      margin: 0 auto;
-      font-size: 1.6rem;
-    }
-  }
-  @media (min-width: 613px) {
-    padding: 20vh 3rem;
-  }
-  @media (min-width: 768px) {
-    padding: 25vh 5rem;
-  }
-  @media (min-width: 1040px) {
-    background-position: 75%;
-    & h2 {
-      padding-top: 0.5vh;
-    }
-    & p {
-      padding: 5vw 0;
-      max-width: 56vw;
-      margin: 0 auto;
-      font-size: 1.8rem;
-    }
+  .intro-video {
+    display: none;
   }
 }

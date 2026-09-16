@@ -1,19 +1,146 @@
-.landing-page-header {
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: end;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--ink-deep);
+  color: white;
+}
+
+.intro-video,
+.intro-veil {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+.intro-video {
+  object-fit: cover;
+  object-position: 52% center;
+}
+
+.intro-veil {
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(35, 22, 40, 0.12) 0%, rgba(35, 22, 40, 0.16) 35%, rgba(35, 22, 40, 0.87) 100%),
+    linear-gradient(90deg, rgba(47, 32, 53, 0.5) 0%, transparent 70%);
+}
+
+.intro-text {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+  padding: 10.5rem 0 7.5rem;
+  text-align: left;
+}
+
+.intro-eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  color: #ead9ef;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.intro-text h2 {
+  max-width: 760px;
+  font-size: clamp(3rem, 13vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: 0.008em;
+  line-height: 0.98;
+}
+
+.intro-text h2 em {
+  display: block;
+  color: #d8b6df;
+  font-weight: 400;
+}
+
+.intro-text > p {
+  max-width: 570px;
+  margin-top: 1.6rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.intro-actions {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.intro-actions button,
+.intro-actions a {
+  display: inline-flex;
   align-items: center;
-  text-align: center;
-  padding: 20px;
+  justify-content: center;
+  min-height: 3.4rem;
+  padding: 0.85rem 1.45rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
 
-  .header {
-    h1 {
-      font-size: 2.5rem;
-      color: #2c3e50;
-    }
+.intro-actions button {
+  border: 1px solid var(--clay);
+  background: var(--clay);
+  color: white;
+  cursor: pointer;
+}
 
-    p {
-      font-size: 1.2rem;
-      color: #7f8c8d;
-    }
+.intro-actions a {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  backdrop-filter: blur(8px);
+}
+
+.intro-actions button:hover,
+.intro-actions a:hover {
+  transform: translateY(-2px);
+}
+
+.intro-actions button:hover {
+  background: var(--clay-dark);
+  border-color: var(--clay-dark);
+}
+
+.intro-actions a:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 768px) {
+  .intro-video {
+    object-position: center;
   }
+
+  .intro-veil {
+    background:
+      linear-gradient(90deg, rgba(47, 32, 53, 0.9) 0%, rgba(47, 32, 53, 0.68) 38%, rgba(47, 32, 53, 0.1) 72%),
+      linear-gradient(180deg, rgba(35, 22, 40, 0.2), rgba(35, 22, 40, 0.38));
+  }
+
+  .intro-text {
+    width: min(1180px, calc(100% - 5rem));
+    padding-block: 11rem 6rem;
+  }
+
+  .intro-text h2 {
+    font-size: clamp(4.25rem, 7vw, 6.8rem);
+  }
+
+  .intro-text > p {
+    font-size: 1.14rem;
+  }
+
 }

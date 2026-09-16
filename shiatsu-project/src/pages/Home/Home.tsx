@@ -9,6 +9,8 @@ import { ConfirmationModal } from '../../components/ConfirmationModal/Confirmati
 import './Home.scss';
 import { Map } from '../../components/Map/Map';
 import { PublicDetails } from '../../components/PublicDetails/PublicDetails';
+import { NavLink } from 'react-router-dom';
+import heroPoster from '../../assets/introTxtImg_16_11zon.webp';
 
 
 
@@ -38,12 +40,33 @@ export const Home: React.FC = () => {
         <div className="home">
             <Header />
             <main className="main-content">
-                <section className="intro">
+                <section className="home-hero" aria-labelledby="home-title">
+                    <video
+                        className="intro-video"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        poster={heroPoster}
+                        aria-hidden="true"
+                    >
+                        <source src="/shiatsu-hero.mp4" type="video/mp4" />
+                    </video>
+                    <div className="intro-veil" aria-hidden="true" />
                     <div className="intro-text">
-                        <h2>Bienvenue chez Shiatsu Yasmina</h2>
+                        <span className="intro-eyebrow">Shiatsu & Lahochi · Yutz</span>
+                        <h2 id="home-title">
+                            Retrouver l’équilibre,
+                            <em> simplement.</em>
+                        </h2>
                         <p>
-                            Reconnectez-vous avec votre bien-être intérieur grâce au shiatsu, une discipline ancestrale qui équilibre corps et esprit. Découvrez des soins personnalisés pour apaiser le stress, soulager les tensions et retrouver votre harmonie naturelle
+                            Des soins personnalisés pour apaiser le stress, relâcher les tensions et retrouver une harmonie durable entre le corps et l’esprit.
                         </p>
+                        <div className="intro-actions">
+                            <button type="button" onClick={handleCTAClick}>Prendre rendez-vous</button>
+                            <NavLink to="/prestations">Découvrir les soins</NavLink>
+                        </div>
                     </div>
                 </section>
                 <Services />

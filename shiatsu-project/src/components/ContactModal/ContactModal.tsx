@@ -52,7 +52,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ onClose, onConfirm }
             );
             setIsLoading(false);
             onConfirm();
-        } catch (error) {
+        } catch {
             setIsLoading(false);
             setError("Une erreur est survenue. Veuillez réessayer.");
         }
